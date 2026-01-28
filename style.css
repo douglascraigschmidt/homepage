@@ -154,26 +154,28 @@ main {
 }
 
 .vita-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 
-    background-color: var(--surface);
-    padding: 20px;
+  background-color: var(--surface);
+  padding: 20px;
 
-    width: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
 
+  clear: both; /* KEY: prevents the floated image from squeezing the grid */
 }
 
 .vita-columns ul {
-    margin: 0;
-    padding-left: 20px;
-    list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  list-style-position: outside;
 }
 
 .vita-columns li {
-    margin-bottom: 6px;
+  margin: 0 0 6px 0;
 }
 
 .vita-index-container {
