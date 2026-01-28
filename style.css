@@ -149,8 +149,9 @@ main {
 }
 
 .resume-container {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;              /* this is your gutter */
+  align-items: flex-start;
 }
 
 .vita-columns {
@@ -217,6 +218,34 @@ main {
   color: var(--wm-green);
 }
 
+.vita-index p {
+  margin: 12px 0 16px;   /* match the feel of other sections */
+}
+
+.vita-index img {
+  display: block;
+  max-width: 200px;      /* keep your sizing intent */
+  height: auto;
+  margin: 0 0 16px 20px; /* similar to your inline margin */
+}
+
+/* Make sure the list grid starts below the float */
+.vita-columns {
+  clear: both;
+  margin-top: 8px;
+}
+
+/* Standardize list indentation for all resume-section lists */
+.resume-section ul,
+.resume-section ol {
+  padding-left: 1.25em;
+}
+
+/* Keep Vita Index consistent with that standard */
+.vita-index .vita-columns ul {
+  padding-left: 1.25em;
+}
+
 .vita-index ul li {
     margin-bottom: 8px;
 }
@@ -235,15 +264,14 @@ main {
 .vita-index-container {
   width: 100%;
   min-width: 320px;
-  padding-right: 20px;
-  align-self: flex-start;
+  padding-right: 0;       /* REMOVE extra gutter */
   box-sizing: border-box;
 }
 
 .resume-content {
-    width: 100%;
-    padding-left: 20px;
-    overflow: auto;
+  width: 100%;
+  padding-left: 0;        /* REMOVE extra gutter */
+  overflow: visible;   
 }
 
 .resume-section {
