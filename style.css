@@ -186,41 +186,29 @@ main {
   clear: both;
 }
 
-/* Consolidated list styling */
+.vita-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
 .vita-index .vita-columns ul {
   margin: 0;
-  padding-left: 1.1em;         /* tighter indent -> more room for text */
+  padding-left: 1.25em;
   list-style: disc;
   list-style-position: outside;
   min-width: 0;
 }
 
-/* Consolidated list styling */
-.vita-index .vita-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
 .vita-columns li {
-  margin: 0 0 4px 0;
+  margin: 0 0 8px 0;  /* a bit more breathing room */
 }
 
-.vita-columns li::marker {
-  font-size: 0.9em;            /* optional */
-}
-
-/* More natural wrapping */
 .vita-columns li a {
   overflow-wrap: normal;
   word-break: normal;
   hyphens: auto;
-}
-
-.vita-columns li a {
-  overflow-wrap: normal;        /* default behavior */
-  word-break: normal;
-  hyphens: auto;                /* allows better line breaks where supported */
 }
 
 .vita-index {
