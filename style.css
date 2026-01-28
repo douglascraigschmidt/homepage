@@ -154,10 +154,27 @@ main {
   align-items: flex-start;
 }
 
+.vita-hero {
+  display: grid;
+  grid-template-columns: 1fr 200px;  /* text + fixed image column */
+  column-gap: 24px;
+  align-items: start;
+}
+
+.vita-thumb {
+  width: 200px;
+  height: auto;
+  display: block;
+  justify-self: end;                /* pushes image to right edge */
+  margin-top: 4px;                  /* optional */
+}
+
 .vita-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  clear: none !important;
+  margin-top: 10px;
 
   background: transparent; /* remove nested card look */
   padding: 0;              /* remove nested padding */
