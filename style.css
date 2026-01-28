@@ -178,6 +178,13 @@ main {
   min-width: 0;
 }
 
+/* Consolidated list styling */
+.vita-index .vita-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .vita-columns li {
   margin: 0 0 4px 0;
 }
@@ -231,18 +238,13 @@ main {
 
 /* Make sure the list grid starts below the float */
 .vita-columns {
-  clear: both;
+  clear: none;
   margin-top: 8px;
 }
 
 /* Standardize list indentation for all resume-section lists */
 .resume-section ul,
 .resume-section ol {
-  padding-left: 1.25em;
-}
-
-/* Keep Vita Index consistent with that standard */
-.vita-index .vita-columns ul {
   padding-left: 1.25em;
 }
 
