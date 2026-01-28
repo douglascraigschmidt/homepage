@@ -162,9 +162,13 @@ main {
   padding: 20px;
 
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 
-  clear: both; /* KEY: prevents the floated image from squeezing the grid */
+  clear: both;
+
+  justify-self: stretch;
+  align-self: stretch;
 }
 
 .vita-columns ul {
@@ -172,10 +176,16 @@ main {
   padding-left: 20px;
   list-style: disc;
   list-style-position: outside;
+
+  min-width: 0;   /* KEY for grid overflow issues */
 }
 
 .vita-columns li {
   margin: 0 0 6px 0;
+}
+
+.vita-columns li a {
+  overflow-wrap: anywhere;  /* optional but robust */
 }
 
 .vita-index-container {
