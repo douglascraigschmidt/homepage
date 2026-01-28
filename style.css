@@ -185,13 +185,8 @@ main {
 }
 
 .vita-columns li a {
-  overflow-wrap: anywhere;  /* optional but robust */
-}
-
-.vita-index-container {
-    width: 25%;
-    padding-right: 20px;
-    align-self: flex-start;
+ overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .vita-index {
@@ -220,11 +215,6 @@ main {
     margin-top: 0;
 }
 
-.vita-index ul {
-    padding-left: 20px;
-    list-style: none;
-}
-
 .vita-index ul li {
     margin-bottom: 8px;
 }
@@ -238,6 +228,20 @@ main {
 .vita-index ul li a:hover {
     color: var(--wm-gold);
     text-decoration: underline;
+}
+
+.vita-index .vita-columns ul {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+.vita-index-container {
+  width: 35%;
+  min-width: 320px;
+  padding-right: 20px;
+  align-self: flex-start;
+  box-sizing: border-box;
 }
 
 .resume-content {
