@@ -157,6 +157,23 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+
+    background-color: var(--surface);
+    padding: 20px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.vita-columns ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.vita-columns li {
+    margin-bottom: 6px;
 }
 
 .vita-index-container {
