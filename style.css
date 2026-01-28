@@ -155,8 +155,8 @@ main {
 
 .vita-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 
   background-color: var(--surface);
   padding: 20px;
@@ -166,27 +166,38 @@ main {
   box-sizing: border-box;
 
   clear: both;
-
   justify-self: stretch;
   align-self: stretch;
 }
 
-.vita-columns ul {
+/* Consolidated list styling */
+.vita-index .vita-columns ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 1.1em;         /* tighter indent -> more room for text */
   list-style: disc;
   list-style-position: outside;
-
-  min-width: 0;   /* KEY for grid overflow issues */
+  min-width: 0;
 }
 
 .vita-columns li {
-  margin: 0 0 6px 0;
+  margin: 0 0 4px 0;
+}
+
+.vita-columns li::marker {
+  font-size: 0.9em;            /* optional */
+}
+
+/* More natural wrapping */
+.vita-columns li a {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: auto;
 }
 
 .vita-columns li a {
- overflow-wrap: break-word;
+  overflow-wrap: normal;        /* default behavior */
   word-break: normal;
+  hyphens: auto;                /* allows better line breaks where supported */
 }
 
 .vita-index {
@@ -228,12 +239,6 @@ main {
 .vita-index ul li a:hover {
     color: var(--wm-gold);
     text-decoration: underline;
-}
-
-.vita-index .vita-columns ul {
-  list-style: disc;
-  list-style-position: outside;
-  padding-left: 20px;
 }
 
 .vita-index-container {
