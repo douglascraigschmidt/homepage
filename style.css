@@ -163,8 +163,21 @@ main {
     font-size: 0.9em;
     background-color: var(--surface);
     padding: 20px;
+    width: 100%;                 /* critical */
+    max-width: 100%;             /* defensive */
+    box-sizing: border-box;      /* critical */
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
+}
+
+.vita-index table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vita-index td {
+    width: 50%;
+    vertical-align: top;
 }
 
 .vita-index h2 {
