@@ -156,17 +156,17 @@ main {
 
 .vita-hero {
   display: grid;
-  grid-template-columns: 1fr 200px;  /* text + fixed image column */
-  column-gap: 24px;
+  grid-template-columns: 1fr 260px; /* left content + right image */
+  column-gap: 30px;
   align-items: start;
 }
 
 .vita-thumb {
-  width: 200px;
+  width: 260px;       /* or keep 200px if you prefer */
+  max-width: 100%;
   height: auto;
   display: block;
-  justify-self: end;                /* pushes image to right edge */
-  margin-top: 4px;                  /* optional */
+  justify-self: end;
 }
 
 .vita-columns {
