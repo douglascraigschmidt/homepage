@@ -153,6 +153,12 @@ main {
     gap: 30px;
 }
 
+.vita-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 .vita-index-container {
     width: 25%;
     padding-right: 20px;
