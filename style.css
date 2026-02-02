@@ -157,7 +157,7 @@ main {
 .vita-hero {
   display: grid;
   grid-template-columns: 1fr 260px; /* left content + right image */
-  column-gap: 30px;
+  column-gap: 20px;
   align-items: start;
 }
 
@@ -169,28 +169,14 @@ main {
   justify-self: end;
 }
 
-.vita-columns {
+.vita-columns{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  clear: none !important;
   margin-top: 10px;
-
-  background: transparent; /* remove nested card look */
-  padding: 0;              /* remove nested padding */
-
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-
-  clear: both;
-}
-
-.vita-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 10px;
 }
 
 .vita-index .vita-columns ul {
