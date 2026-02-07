@@ -71,7 +71,7 @@ header {
 
 .header-photo img {
     height: auto;
-    width: min(260px, 35vw);
+    width: min(240px, 35vw);
     border: 2px solid var(--wm-gold);
     box-shadow: var(--shadow-sm);
 }
