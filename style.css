@@ -460,6 +460,13 @@ table th {
     border: 2px solid var(--wm-green);
 }
 
+/* Digital Learning sidebar (desktop: float right, mobile: hidden) */
+.digital-learning-sidebar {
+    float: right;
+    margin: 0 0 20px 20px;
+    width: 200px;
+}
+
 /* Content Blocks */
 .content-block {
     background-color: var(--surface);
@@ -499,7 +506,9 @@ table th {
     margin-top: 8px;
 }
 
-/* Mobile Styles */
+/* =============================================
+   MOBILE STYLES
+   ============================================= */
 @media (max-width: 768px) {
     .container {
         margin: 10px;
@@ -521,23 +530,27 @@ table th {
     }
 
     nav {
-        padding: 0 15px;
+        padding: 0 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 8px;
     }
 
     nav li {
         margin-right: 0;
-        margin-bottom: 5px;
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     nav a {
-        padding: 12px 0;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
+        padding: 10px 12px;
+        font-size: 13px;
+        white-space: nowrap;
     }
 
     main {
@@ -567,12 +580,91 @@ table th {
         padding: 0;
     }
 
+    /* Make card grid single column on mobile */
     .card-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 15px 0;
+    }
+
+    /* Tighten card padding on mobile */
+    .card {
+        padding: 16px;
+        margin-bottom: 0;
     }
 
     .resume-container {
         gap: 15px;
+    }
+
+    .vita-hero {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .vita-thumb {
+        width: 100%;
+        max-width: 260px;
+        justify-self: center;
+        order: -1;
+    }
+
+    .vita-columns {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .vita-index {
+        padding: 15px;
+    }
+
+    .resume-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-box {
+        padding: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 2em;
+    }
+
+    .contact-info {
+        font-size: 0.85em;
+    }
+
+    .contact-info a {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    .hero-section,
+    .cta-section {
+        padding: 25px 15px;
+    }
+
+    /* Tighten content blocks on mobile */
+    .content-block {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     table {
@@ -582,6 +674,11 @@ table th {
         -webkit-overflow-scrolling: touch;
         border: 1px solid var(--border);
         border-radius: var(--radius);
+    }
+
+    /* Hide decorative sidebar images on mobile */
+    .digital-learning-sidebar {
+        display: none;
     }
 }
 
